@@ -82,8 +82,8 @@ The following preprocessing steps were applied:
 ## 📊 Model Performance
 Evaluation Metrics:
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
+- Accuracy = 0.983
+- Precision = 0.974
+- Recall = 0.890
+- F1 Score = 0.93
   
