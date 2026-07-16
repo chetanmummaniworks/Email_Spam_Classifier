@@ -1,89 +1,75 @@
-
 # 📧 Email Spam Classifier
-A machine learning-powered web application that classifies email messages as **Spam** or **Not Spam (Ham)** using Natural Language Processing (NLP) techniques.
+
+A machine learning-based web application that classifies email messages as **Spam** or **Ham**.
+
+---
 
 ## 🔗 Deployed Link
 
+**Email Spam Classifier Web App**
+
 https://emailspamclassifier-bhve2aosse5mevnkx4uegp.streamlit.app/
 
+---
+
 ## 📖 Project Overview
-This project is an email spam detection system built using the **Multinomial Naive Bayes** algorithm. It analyzes the text of an email, applies text preprocessing and TF-IDF vectorization, and predicts whether the email is **Spam** or **Ham**.
+
+This project is an email spam classification application built using Scikit-learn. It predicts whether an email is Spam or Ham using TF-IDF Vectorization and a trained machine learning model.
+
+---
 
 ## 🛠️ Tech Stack
+
 - **Language:** Python
 - **Frontend:** Streamlit
-- **Machine Learning Model:** Multinomial Naive Bayes
-- **Feature Extraction:** TF-IDF Vectorizer
-- **Libraries:** Scikit-learn, Pandas, NumPy, NLTK
+- **Machine Learning:** Scikit-learn
+- **Vectorization:** TF-IDF
 - **Deployment:** Streamlit Cloud
 
+---
 
 ## 📂 Dataset Overview
+
 The dataset contains:
 
-- Email text/message
-- Target label
-  - **0 → Ham (Not Spam)**
-  - **1 → Spam**
-### Data Preprocessing
+- Email message
+- Label (Spam / Ham)
 
-The following preprocessing steps were applied:
+The email text was converted into numerical features using TF-IDF Vectorization before training the model.
 
-- Converted text to lowercase
-- Tokenization
-- Removed special characters
-- Removed stopwords
-- Applied stemming using Porter Stemmer
-- Transformed text using TF-IDF Vectorization
+---
 
 ## 🧠 Model Pipeline
-### 1. Data Preprocessing
 
-- Cleaned email text
-- Removed punctuation and stopwords
-- Applied stemming
-- Converted processed text into TF-IDF vectors
+1. **Data Preparation**
+   - Loaded and explored the dataset.
 
-### 2. Feature Engineering
+2. **Feature Extraction**
+   - Applied TF-IDF Vectorization.
 
-- TF-IDF Vectorization
-
-### 3. Model Training
-
-- Trained a **Multinomial Naive Bayes** classifier
-- Evaluated using classification metrics
-
-### 4. Prediction
-
-- User enters an email message.
-- The message is preprocessed.
-- TF-IDF transforms the text into numerical features.
-- The trained model predicts whether the email is Spam or Ham.
+3. **Model Training**
+   - Trained the MultiNomial NaiveBayes ML Model.
+   - Achieved F1 Score of 0.93
+   - Saved the trained model and vectorizer.
 
 ---
 
 ## 💡 How to Use
-1. Open the deployed Streamlit application.
-2. Enter or paste an email message.
-3. Click **Predict**.
-4. The application displays whether the email is:
 
-- 📩 Ham (Not Spam)
-- 🚨 Spam
+1. Open the deployed application.
+2. Enter an email message.
+3. Click **Predict**.
+4. The app displays whether the email is **Spam** or **Ham**.
+
+---
 
 ## 📁 Project Files
+
 - **app.py** — Streamlit application
-- **spam_classifier.pkl** — Trained Machine Learning model
-- **tfidf_vectorizer.pkl** — Saved TF-IDF Vectorizer
+- **spam_classifier.pkl** — Trained Multi Nomial Naive Bayes model
+- **tfidf_vectorizer.pkl** — Saved TF-IDF vectorizer
 - **requirements.txt** — Project dependencies
 - **README.md** — Project documentation
 
+---
 
-## 📊 Model Performance
-Evaluation Metrics:
-
-- Accuracy = 0.983
-- Precision = 0.974
-- Recall = 0.890
-- F1 Score = 0.93
-  
